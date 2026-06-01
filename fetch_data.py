@@ -26,29 +26,26 @@ def export_view(access_token, view_id, name):
         'ZANALYTICS-ORGID': ORG_ID
     }
 
-    # Iniciar exportación asíncrona
-    url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views/{view_id}/data'
-    params = {
-        'config': json.dumps({'responseFormat': 'json'}),
-        'exportType': 'async'
+    # Endpoint correcto para exportación asíncrona según docs Zoho Analytics API v2
+    url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views/{view_id}/data/export'
+    payload = {
+        'CONFIG': json.dumps({'responseFormat': 'json'})
     }
-    r = requests.get(url, headers=headers, params=params)
-    print(f'{name} init: {r.status_code} {r.text[:400]}')
+    r = requests.post(url, headers=headers, data=payload)
+    print(f'{name} POST export: {r.status_code} {r.text[:400]}')
 
     try:
         result = r.json()
     except:
-        print(f'{name} JSON parse error')
         return []
 
     job_id = result.get('data', {}).get('jobId')
     print(f'{name} jobId: {job_id}')
 
     if not job_id:
-        print(f'{name} no jobId found')
         return []
 
-    # Polling
+    # Polling del job
     job_url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/exportjobs/{job_id}'
     for i in range(20):
         time.sleep(5)
@@ -60,7 +57,7 @@ def export_view(access_token, view_id, name):
         if status == 'completed':
             dl_url = job_data.get('data', {}).get('downloadUrl', '')
             if dl_url:
-                rd = requests.get(dl_url, headers=headers)
+                rd = requests.get(dl_url)
                 try:
                     data = rd.json()
                     rows = data.get('data', {}).get('rows', [])
@@ -72,7 +69,6 @@ def export_view(access_token, view_id, name):
                 except:
                     return []
         elif status in ['failed', 'error']:
-            print(f'{name} failed: {job_data}')
             return []
 
     return []
