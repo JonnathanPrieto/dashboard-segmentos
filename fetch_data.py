@@ -22,29 +22,35 @@ def get_views(access_token):
         'Authorization': f'Zoho-oauthtoken {access_token}',
         'ZANALYTICS-ORGID': ORG_ID
     }
-    url = f'https://analyticsapi.zoho.com/api/v2/workspaces/{WORKSPACE_ID}/views'
+    url = f'https://www.zohoapis.com/analytics/v2/workspaces/{WORKSPACE_ID}/views'
     r = requests.get(url, headers=headers)
     print(f'Views status: {r.status_code}')
     print(f'Response: {r.text[:500]}')
-    return r.json()
+    try:
+        return r.json()
+    except:
+        return {}
 
 def export_data(access_token, view_id):
     headers = {
         'Authorization': f'Zoho-oauthtoken {access_token}',
         'ZANALYTICS-ORGID': ORG_ID
     }
-    url = f'https://analyticsapi.zoho.com/api/v2/workspaces/{WORKSPACE_ID}/views/{view_id}/data'
+    url = f'https://www.zohoapis.com/analytics/v2/workspaces/{WORKSPACE_ID}/views/{view_id}/data'
     params = {'config': json.dumps({'responseFormat': 'json'})}
     r = requests.get(url, headers=headers, params=params)
     print(f'Export status: {r.status_code}')
     print(f'Export response: {r.text[:300]}')
-    result = r.json()
-    rows = result.get('data', {}).get('rows', [])
-    cols = result.get('data', {}).get('columns', [])
-    if not cols:
+    try:
+        result = r.json()
+        rows = result.get('data', {}).get('rows', [])
+        cols = result.get('data', {}).get('columns', [])
+        if not cols:
+            return []
+        col_names = [c['columnName'] for c in cols]
+        return [dict(zip(col_names, row)) for row in rows]
+    except:
         return []
-    col_names = [c['columnName'] for c in cols]
-    return [dict(zip(col_names, row)) for row in rows]
 
 def main():
     print('Obteniendo access token...')
