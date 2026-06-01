@@ -8,161 +8,32 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Segoe UI', sans-serif; background: #0f0f13; color: #e0e0e0; }
-  
-  header {
-    background: #1a1a24;
-    padding: 18px 32px;
-    border-bottom: 1px solid #2a2a3a;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
+  header { background: #1a1a24; padding: 18px 32px; border-bottom: 1px solid #2a2a3a; display: flex; align-items: center; gap: 16px; }
   header h1 { font-size: 20px; font-weight: 600; color: #fff; }
   header span { font-size: 13px; color: #888; }
-  .badge {
-    background: #7F77DD22;
-    color: #7F77DD;
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    border: 1px solid #7F77DD44;
-  }
-
-  .tabs {
-    display: flex;
-    gap: 4px;
-    padding: 16px 32px 0;
-    border-bottom: 1px solid #2a2a3a;
-  }
-  .tab {
-    padding: 10px 20px;
-    border-radius: 8px 8px 0 0;
-    cursor: pointer;
-    font-size: 13px;
-    color: #888;
-    border: 1px solid transparent;
-    border-bottom: none;
-    transition: all 0.2s;
-  }
-  .tab.active {
-    background: #1a1a24;
-    color: #fff;
-    border-color: #2a2a3a;
-  }
+  .badge { background: #7F77DD22; color: #7F77DD; padding: 3px 10px; border-radius: 20px; font-size: 12px; border: 1px solid #7F77DD44; }
+  .tabs { display: flex; gap: 4px; padding: 16px 32px 0; border-bottom: 1px solid #2a2a3a; }
+  .tab { padding: 10px 20px; border-radius: 8px 8px 0 0; cursor: pointer; font-size: 13px; color: #888; border: 1px solid transparent; border-bottom: none; transition: all 0.2s; }
+  .tab.active { background: #1a1a24; color: #fff; border-color: #2a2a3a; }
   .tab:hover:not(.active) { color: #ccc; }
-
   .panel { display: none; padding: 24px 32px; }
   .panel.active { display: block; }
-
-  .controls {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
+  .controls { display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap; }
   .controls label { font-size: 13px; color: #888; }
-  select, input[type=range] {
-    background: #1a1a24;
-    border: 1px solid #2a2a3a;
-    color: #e0e0e0;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 13px;
-    cursor: pointer;
-  }
-  .btn {
-    background: #7F77DD;
-    color: #fff;
-    border: none;
-    padding: 7px 16px;
-    border-radius: 6px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
+  select { background: #1a1a24; border: 1px solid #2a2a3a; color: #e0e0e0; padding: 6px 10px; border-radius: 6px; font-size: 13px; cursor: pointer; }
+  .btn { background: #7F77DD; color: #fff; border: none; padding: 7px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; transition: opacity 0.2s; }
   .btn:hover { opacity: 0.85; }
-  .btn.secondary {
-    background: #1a1a24;
-    border: 1px solid #2a2a3a;
-    color: #ccc;
-  }
-
-  .chart-container {
-    background: #1a1a24;
-    border: 1px solid #2a2a3a;
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
-  }
-  .chart-title {
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 16px;
-  }
-
-  .legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 12px;
-  }
-  .leg-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: #aaa;
-  }
-  .leg-dot {
-    width: 10px; height: 10px;
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-
-  #tooltip {
-    position: fixed;
-    pointer-events: none;
-    display: none;
-    background: #1a1a24;
-    border: 1px solid #3a3a4a;
-    border-radius: 8px;
-    padding: 10px 14px;
-    font-size: 12px;
-    color: #e0e0e0;
-    max-width: 220px;
-    line-height: 1.7;
-    z-index: 1000;
-  }
-
-  .month-display {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    font-size: 48px;
-    font-weight: 700;
-    color: #ffffff15;
-    pointer-events: none;
-    user-select: none;
-  }
-
-  .loading {
-    text-align: center;
-    padding: 60px;
-    color: #666;
-    font-size: 14px;
-  }
-  .loading-spinner {
-    width: 32px; height: 32px;
-    border: 3px solid #2a2a3a;
-    border-top-color: #7F77DD;
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    margin: 0 auto 16px;
-  }
+  .btn.secondary { background: #1a1a24; border: 1px solid #2a2a3a; color: #ccc; }
+  .chart-container { background: #1a1a24; border: 1px solid #2a2a3a; border-radius: 12px; padding: 20px; position: relative; }
+  .chart-title { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 16px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .leg-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #aaa; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  #tooltip { position: fixed; pointer-events: none; display: none; background: #1a1a24; border: 1px solid #3a3a4a; border-radius: 8px; padding: 10px 14px; font-size: 12px; color: #e0e0e0; max-width: 220px; line-height: 1.7; z-index: 1000; }
+  .month-display { position: absolute; bottom: 40px; right: 40px; font-size: 48px; font-weight: 700; color: #ffffff15; pointer-events: none; user-select: none; }
+  .loading { text-align: center; padding: 60px; color: #666; font-size: 14px; }
+  .loading-spinner { width: 32px; height: 32px; border: 3px solid #2a2a3a; border-top-color: #7F77DD; border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px; }
   @keyframes spin { to { transform: rotate(360deg); } }
-
   svg text { font-family: 'Segoe UI', sans-serif; }
 </style>
 </head>
@@ -173,7 +44,7 @@
     <h1>Dashboard Segmentos Baloto</h1>
     <span id="last-updated">Cargando datos...</span>
   </div>
-  <div class="badge" id="data-badge">●  Conectado a Zoho</div>
+  <div class="badge" id="data-badge">● Conectado</div>
 </header>
 
 <div class="tabs">
@@ -184,7 +55,6 @@
 
 <div id="tooltip"></div>
 
-<!-- PANEL 1: ALLUVIAL -->
 <div id="panel-alluvial" class="panel active">
   <div class="controls">
     <label>Año:</label>
@@ -200,16 +70,12 @@
   </div>
   <div class="chart-container">
     <div class="chart-title">Transiciones de Segmentos mes a mes</div>
-    <div id="alluvial-loading" class="loading">
-      <div class="loading-spinner"></div>
-      Cargando datos de transiciones...
-    </div>
+    <div id="alluvial-loading" class="loading"><div class="loading-spinner"></div>Cargando datos de transiciones...</div>
     <svg id="alluvial-svg" style="display:none;width:100%;"></svg>
     <div class="legend" id="alluvial-legend"></div>
   </div>
 </div>
 
-<!-- PANEL 2: RACE LINE -->
 <div id="panel-race-line" class="panel">
   <div class="controls">
     <button class="btn" id="btn-play-line" onclick="toggleRaceLine()">▶ Play</button>
@@ -223,17 +89,13 @@
   </div>
   <div class="chart-container">
     <div class="chart-title">Evolución Acumulada de Segmentos</div>
-    <div id="race-line-loading" class="loading">
-      <div class="loading-spinner"></div>
-      Cargando datos...
-    </div>
+    <div id="race-line-loading" class="loading"><div class="loading-spinner"></div>Cargando datos...</div>
     <svg id="race-line-svg" style="display:none;width:100%;height:460px;"></svg>
     <div class="month-display" id="month-display-line"></div>
     <div class="legend" id="race-line-legend"></div>
   </div>
 </div>
 
-<!-- PANEL 3: RACE BAR -->
 <div id="panel-race-bar" class="panel">
   <div class="controls">
     <button class="btn" id="btn-play-bar" onclick="toggleRaceBar()">▶ Play</button>
@@ -247,10 +109,7 @@
   </div>
   <div class="chart-container">
     <div class="chart-title">Ranking de Segmentos por Usuarios</div>
-    <div id="race-bar-loading" class="loading">
-      <div class="loading-spinner"></div>
-      Cargando datos...
-    </div>
+    <div id="race-bar-loading" class="loading"><div class="loading-spinner"></div>Cargando datos...</div>
     <svg id="race-bar-svg" style="display:none;width:100%;height:460px;"></svg>
     <div class="month-display" id="month-display-bar"></div>
   </div>
@@ -268,21 +127,27 @@ const COLORS = {
 };
 const SEGMENTS = Object.keys(COLORS);
 
-let transData = [];
-let segData = [];
-let allMonths = [];
-
-// Race line state
-let raceLineInterval = null;
-let raceLineIdx = 0;
-let raceLinePlaying = false;
-
-// Race bar state
-let raceBarInterval = null;
-let raceBarIdx = 0;
-let raceBarPlaying = false;
-
+let transData = [], segData = [], allMonths = [];
+let raceLineInterval = null, raceLineIdx = 0, raceLinePlaying = false;
+let raceBarInterval = null, raceBarIdx = 0, raceBarPlaying = false;
 const tooltip = document.getElementById('tooltip');
+
+function parseDate(val) {
+  if (!val) return '';
+  const months = {Jan:'01',Feb:'02',Mar:'03',Apr:'04',May:'05',Jun:'06',Jul:'07',Aug:'08',Sep:'09',Oct:'10',Nov:'11',Dec:'12'};
+  if (/^\d{4}-\d{2}$/.test(val.trim())) return val.trim();
+  const m = val.trim().match(/(\d+)\s+(\w+),?\s+(\d{4})/);
+  if (m) return `${m[3]}-${months[m[2]] || '01'}`;
+  return val;
+}
+
+function parseNum(val) {
+  if (!val && val !== 0) return 0;
+  const s = String(val).replace(/\$/g, '').replace(/\./g, '').replace(',', '.').trim();
+  return parseFloat(s) || 0;
+}
+
+function fmt(n) { return Math.round(n).toLocaleString('es-CO'); }
 
 function showTooltip(html, e) {
   tooltip.style.display = 'block';
@@ -291,8 +156,6 @@ function showTooltip(html, e) {
   tooltip.style.top = (e.clientY - 10) + 'px';
 }
 function hideTooltip() { tooltip.style.display = 'none'; }
-
-function fmt(n) { return Math.round(n).toLocaleString('es-CO'); }
 
 function showTab(name) {
   document.querySelectorAll('.tab').forEach((t, i) => {
@@ -304,18 +167,27 @@ function showTab(name) {
   if (name === 'race-bar' && segData.length > 0) initRaceBar();
 }
 
-// ─── LOAD DATA ───────────────────────────────────────────────
 async function loadData() {
   try {
     const [t, s] = await Promise.all([
       fetch('data/transiciones.json').then(r => r.json()),
       fetch('data/segmentacion.json').then(r => r.json())
     ]);
-    transData = t;
-    segData = s;
+    transData = t.map(r => ({
+      segmento_origen: r.segmento_origen,
+      segmento_destino: r.segmento_destino,
+      transicion: r.transicion,
+      usuarios: parseNum(r.usuarios)
+    }));
+    segData = s.map(r => ({
+      fecha_snapshot: parseDate(r.fecha_snapshot),
+      segmento_usuario: r.segmento_usuario,
+      total_usuarios: parseNum(r.total_usuarios),
+      total_apuestas: parseNum(r.total_apuestas),
+      total_importe: parseNum(r.total_importe)
+    }));
     allMonths = [...new Set(segData.map(r => r.fecha_snapshot))].sort();
-    document.getElementById('last-updated').textContent = 
-      'Última actualización: ' + new Date().toLocaleDateString('es-CO');
+    document.getElementById('last-updated').textContent = 'Última actualización: ' + new Date().toLocaleDateString('es-CO');
     document.getElementById('data-badge').textContent = '● Datos cargados';
     drawAlluvial();
     buildLegends();
@@ -330,52 +202,41 @@ async function loadData() {
 function buildLegends() {
   ['alluvial-legend', 'race-line-legend'].forEach(id => {
     const el = document.getElementById(id);
-    el.innerHTML = SEGMENTS.map(s => 
+    if (el) el.innerHTML = SEGMENTS.map(s =>
       `<div class="leg-item"><span class="leg-dot" style="background:${COLORS[s]}"></span><span>${s}</span></div>`
     ).join('');
   });
 }
 
-// ─── ALLUVIAL ────────────────────────────────────────────────
 function drawAlluvial() {
   if (!transData.length) return;
   const yearFilter = document.getElementById('year-filter').value;
   const hideSame = document.getElementById('hide-same').checked;
-
   let data = transData;
-  if (yearFilter !== 'all') {
-    data = data.filter(r => r.transicion && r.transicion.startsWith(yearFilter));
-  }
+  if (yearFilter !== 'all') data = data.filter(r => r.transicion && r.transicion.startsWith(yearFilter));
   if (hideSame) data = data.filter(r => r.segmento_origen !== r.segmento_destino);
-
   const months = [...new Set(data.flatMap(r => r.transicion ? r.transicion.split(' → ') : []))].sort();
   if (!months.length) return;
-
   const svg = document.getElementById('alluvial-svg');
   document.getElementById('alluvial-loading').style.display = 'none';
   svg.style.display = 'block';
-
   const W = svg.parentElement.offsetWidth - 40;
   const H = 500;
   const PAD = { top: 28, bottom: 36, left: 8, right: 8 };
-  const nodeW = 18;
-  const GAP = 5;
-  const nCols = months.length;
-  const colSpacing = (W - PAD.left - PAD.right - nodeW) / Math.max(nCols - 1, 1);
+  const nodeW = 18, GAP = 5;
+  const colSpacing = (W - PAD.left - PAD.right - nodeW) / Math.max(months.length - 1, 1);
   const colXs = months.map((_, i) => PAD.left + i * colSpacing);
   const drawH = H - PAD.top - PAD.bottom;
   const segH = (drawH - GAP * (SEGMENTS.length - 1)) / SEGMENTS.length;
-
-  // Build month totals
   const monthTotals = {};
   months.forEach(m => { monthTotals[m] = {}; SEGMENTS.forEach(s => monthTotals[m][s] = 0); });
   data.forEach(r => {
     if (!r.transicion) return;
-    const [from, , to] = r.transicion.split(' ');
-    if (monthTotals[from]) monthTotals[from][r.segmento_origen] = (monthTotals[from][r.segmento_origen]||0) + (+r.usuarios||0);
-    if (monthTotals[to]) monthTotals[to][r.segmento_destino] = (monthTotals[to][r.segmento_destino]||0) + (+r.usuarios||0);
+    const parts = r.transicion.split(' → ');
+    const from = parts[0], to = parts[1];
+    if (monthTotals[from]) monthTotals[from][r.segmento_origen] = (monthTotals[from][r.segmento_origen]||0) + r.usuarios;
+    if (monthTotals[to]) monthTotals[to][r.segmento_destino] = (monthTotals[to][r.segmento_destino]||0) + r.usuarios;
   });
-
   function buildPos(mi) {
     const pos = {};
     SEGMENTS.forEach((s, si) => {
@@ -384,21 +245,19 @@ function drawAlluvial() {
     return pos;
   }
   const allPos = months.map((_, i) => buildPos(i));
-
   let paths = '', nodes = '', labels = '';
-
   months.forEach((m, mi) => {
     if (mi === months.length - 1) return;
     const trans = `${m} → ${months[mi+1]}`;
     const tData = data.filter(r => r.transicion === trans);
     const leftPos = allPos[mi], rightPos = allPos[mi+1];
     const leftTotalForSeg = {};
-    tData.forEach(r => { leftTotalForSeg[r.segmento_origen] = (leftTotalForSeg[r.segmento_origen]||0) + (+r.usuarios||0); });
+    tData.forEach(r => { leftTotalForSeg[r.segmento_origen] = (leftTotalForSeg[r.segmento_origen]||0) + r.usuarios; });
     const leftOffsets = {}, rightOffsets = {};
     SEGMENTS.forEach(s => { leftOffsets[s] = 0; rightOffsets[s] = 0; });
     tData.sort((a,b) => SEGMENTS.indexOf(a.segmento_origen) - SEGMENTS.indexOf(b.segmento_origen) || b.usuarios - a.usuarios);
     tData.forEach(r => {
-      const orig = r.segmento_origen, dest = r.segmento_destino, val = +r.usuarios||0;
+      const orig = r.segmento_origen, dest = r.segmento_destino, val = r.usuarios;
       const lp = leftPos[orig], rp = rightPos[dest];
       if (!lp || !rp) return;
       const lTotal = leftTotalForSeg[orig]||1;
@@ -409,68 +268,45 @@ function drawAlluvial() {
       const x1 = lp.x + nodeW, x2 = rp.x, mx = (x1+x2)/2;
       const col = COLORS[orig]||'#888';
       const pct = ((val/lTotal)*100).toFixed(1);
-      paths += `<path d="M${x1},${ly} C${mx},${ly} ${mx},${ry} ${x2},${ry} L${x2},${ry+rh} C${mx},${ry+rh} ${mx},${ly+lh} ${x1},${ly+lh} Z"
-        fill="${col}" fill-opacity="${orig===dest?0.13:0.42}" stroke="none"
-        data-orig="${orig}" data-dest="${dest}" data-trans="${trans}" data-val="${val}" data-pct="${pct}"
-        style="cursor:pointer;" class="fp"/>`;
+      paths += `<path d="M${x1},${ly} C${mx},${ly} ${mx},${ry} ${x2},${ry} L${x2},${ry+rh} C${mx},${ry+rh} ${mx},${ly+lh} ${x1},${ly+lh} Z" fill="${col}" fill-opacity="${orig===dest?0.13:0.42}" stroke="none" data-orig="${orig}" data-dest="${dest}" data-trans="${trans}" data-val="${val}" data-pct="${pct}" style="cursor:pointer;" class="fp"/>`;
     });
   });
-
   months.forEach((m, mi) => {
     const pos = allPos[mi];
     const shortM = m.replace('-', '/');
     SEGMENTS.forEach(s => {
       const p = pos[s];
-      nodes += `<rect x="${p.x}" y="${p.y}" width="${nodeW}" height="${p.h}" fill="${COLORS[s]}" rx="2"
-        class="seg-node" data-seg="${s}" data-month="${m}" data-total="${p.total}" style="cursor:pointer;"/>`;
+      nodes += `<rect x="${p.x}" y="${p.y}" width="${nodeW}" height="${p.h}" fill="${COLORS[s]}" rx="2" class="seg-node" data-seg="${s}" data-month="${m}" data-total="${p.total}" style="cursor:pointer;"/>`;
     });
     labels += `<text x="${colXs[mi]+nodeW/2}" y="${H-PAD.bottom+16}" text-anchor="middle" font-size="10" fill="#666">${shortM}</text>`;
   });
-
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.setAttribute('height', H);
   svg.innerHTML = paths + nodes + labels;
-
   svg.querySelectorAll('.fp').forEach(p => {
     p.addEventListener('mouseenter', e => {
-      showTooltip(`<span style="font-size:11px;color:#666">${p.dataset.trans}</span><br>
-        <strong style="color:${COLORS[p.dataset.orig]}">${p.dataset.orig}</strong> → <strong style="color:${COLORS[p.dataset.dest]}">${p.dataset.dest}</strong><br>
-        <span style="font-size:13px;font-weight:600">${fmt(+p.dataset.val)}</span> usuarios<br>
-        <span style="color:#888">${p.dataset.pct}% del segmento origen</span>`, e);
+      showTooltip(`<span style="font-size:11px;color:#666">${p.dataset.trans}</span><br><strong style="color:${COLORS[p.dataset.orig]}">${p.dataset.orig}</strong> → <strong style="color:${COLORS[p.dataset.dest]}">${p.dataset.dest}</strong><br><span style="font-size:13px;font-weight:600">${fmt(+p.dataset.val)}</span> usuarios<br><span style="color:#888">${p.dataset.pct}% del segmento origen</span>`, e);
       p.setAttribute('fill-opacity', p.dataset.orig===p.dataset.dest ? '0.25' : '0.7');
     });
-    p.addEventListener('mousemove', e => {
-      tooltip.style.left = (e.clientX+14)+'px';
-      tooltip.style.top = (e.clientY-10)+'px';
-    });
-    p.addEventListener('mouseleave', () => {
-      hideTooltip();
-      p.setAttribute('fill-opacity', p.dataset.orig===p.dataset.dest ? '0.13' : '0.42');
-    });
+    p.addEventListener('mousemove', e => { tooltip.style.left=(e.clientX+14)+'px'; tooltip.style.top=(e.clientY-10)+'px'; });
+    p.addEventListener('mouseleave', () => { hideTooltip(); p.setAttribute('fill-opacity', p.dataset.orig===p.dataset.dest?'0.13':'0.42'); });
   });
-
   svg.querySelectorAll('.seg-node').forEach(n => {
     n.addEventListener('mouseenter', e => {
-      showTooltip(`<strong style="color:${COLORS[n.dataset.seg]}">${n.dataset.seg}</strong><br>
-        <span style="color:#888">${n.dataset.month}</span><br>
-        <span style="font-size:14px;font-weight:600">${fmt(+n.dataset.total)}</span> usuarios`, e);
+      showTooltip(`<strong style="color:${COLORS[n.dataset.seg]}">${n.dataset.seg}</strong><br><span style="color:#888">${n.dataset.month}</span><br><span style="font-size:14px;font-weight:600">${fmt(+n.dataset.total)}</span> usuarios`, e);
       n.setAttribute('opacity', '0.7');
     });
-    n.addEventListener('mousemove', e => {
-      tooltip.style.left = (e.clientX+14)+'px';
-      tooltip.style.top = (e.clientY-10)+'px';
-    });
+    n.addEventListener('mousemove', e => { tooltip.style.left=(e.clientX+14)+'px'; tooltip.style.top=(e.clientY-10)+'px'; });
     n.addEventListener('mouseleave', () => { hideTooltip(); n.setAttribute('opacity','1'); });
   });
 }
 
-// ─── RACE LINE ────────────────────────────────────────────────
 function initRaceLine() {
   if (!segData.length) return;
   document.getElementById('race-line-loading').style.display = 'none';
   document.getElementById('race-line-svg').style.display = 'block';
   raceLineIdx = 0;
-  drawRaceLine(raceLineIdx);
+  drawRaceLine(0);
 }
 
 function drawRaceLine(upToIdx) {
@@ -481,62 +317,37 @@ function drawRaceLine(upToIdx) {
   const margin = { top: 20, right: 120, bottom: 40, left: 70 };
   const iW = W - margin.left - margin.right;
   const iH = H - margin.top - margin.bottom;
-
   svg.attr('viewBox', `0 0 ${W} ${H}`).selectAll('*').remove();
   const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
-
   const x = d3.scalePoint().domain(allMonths).range([0, iW]);
-  const maxVal = d3.max(segData, d => +d.total_usuarios) || 1;
+  const maxVal = d3.max(segData, d => d.total_usuarios) || 1;
   const y = d3.scaleLinear().domain([0, maxVal * 1.05]).range([iH, 0]);
-
-  // Grid
-  g.append('g').attr('class','grid')
-    .call(d3.axisLeft(y).tickSize(-iW).tickFormat(''))
-    .selectAll('line').style('stroke','#2a2a3a').style('stroke-dasharray','3,3');
+  g.append('g').attr('class','grid').call(d3.axisLeft(y).tickSize(-iW).tickFormat('')).selectAll('line').style('stroke','#2a2a3a').style('stroke-dasharray','3,3');
   g.select('.grid .domain').remove();
-
-  // Axes
   const xTicks = allMonths.filter((_, i) => i % 3 === 0);
-  g.append('g').attr('transform',`translate(0,${iH})`)
-    .call(d3.axisBottom(x).tickValues(xTicks))
-    .selectAll('text').style('fill','#666').style('font-size','10px').attr('transform','rotate(-30)').attr('text-anchor','end');
-  g.append('g').call(d3.axisLeft(y).tickFormat(d => d >= 1000 ? (d/1000).toFixed(0)+'K' : d))
-    .selectAll('text').style('fill','#666').style('font-size','10px');
+  g.append('g').attr('transform',`translate(0,${iH})`).call(d3.axisBottom(x).tickValues(xTicks)).selectAll('text').style('fill','#666').style('font-size','10px').attr('transform','rotate(-30)').attr('text-anchor','end');
+  g.append('g').call(d3.axisLeft(y).tickFormat(d => d >= 1000 ? (d/1000).toFixed(0)+'K' : d)).selectAll('text').style('fill','#666').style('font-size','10px');
   g.selectAll('.domain').style('stroke','#2a2a3a');
   g.selectAll('.tick line').style('stroke','#2a2a3a');
-
-  // Lines
   SEGMENTS.forEach(seg => {
     const segPoints = months.map(m => {
       const row = segData.find(r => r.fecha_snapshot === m && r.segmento_usuario === seg);
-      return { m, v: row ? +row.total_usuarios : 0 };
+      return { m, v: row ? row.total_usuarios : 0 };
     });
     const line = d3.line().x(d => x(d.m)).y(d => y(d.v)).curve(d3.curveMonotoneX);
-    g.append('path').datum(segPoints)
-      .attr('fill','none').attr('stroke', COLORS[seg]).attr('stroke-width', 2.5)
-      .attr('opacity', 0.9).attr('d', line);
-
-    // Last point label
+    g.append('path').datum(segPoints).attr('fill','none').attr('stroke', COLORS[seg]).attr('stroke-width', 2.5).attr('opacity', 0.9).attr('d', line);
     const last = segPoints[segPoints.length - 1];
     if (last && last.v > 0) {
       g.append('circle').attr('cx', x(last.m)).attr('cy', y(last.v)).attr('r', 4).attr('fill', COLORS[seg]);
-      g.append('text').attr('x', x(last.m) + 8).attr('y', y(last.v) + 4)
-        .attr('fill', COLORS[seg]).attr('font-size', '11px').attr('font-weight', '600')
-        .text(fmt(last.v));
+      g.append('text').attr('x', x(last.m)+8).attr('y', y(last.v)+4).attr('fill', COLORS[seg]).attr('font-size','11px').attr('font-weight','600').text(fmt(last.v));
     }
   });
-
-  // Month label
-  if (months.length > 0) {
-    const currentMonth = months[months.length - 1];
-    document.getElementById('month-display-line').textContent = currentMonth.replace('-', '/');
-  }
+  if (months.length > 0) document.getElementById('month-display-line').textContent = months[months.length-1].replace('-','/');
 }
 
 function toggleRaceLine() {
   if (raceLinePlaying) {
-    clearInterval(raceLineInterval);
-    raceLinePlaying = false;
+    clearInterval(raceLineInterval); raceLinePlaying = false;
     document.getElementById('btn-play-line').textContent = '▶ Play';
   } else {
     if (raceLineIdx >= allMonths.length - 1) raceLineIdx = 0;
@@ -546,89 +357,46 @@ function toggleRaceLine() {
     raceLineInterval = setInterval(() => {
       raceLineIdx++;
       drawRaceLine(raceLineIdx);
-      if (raceLineIdx >= allMonths.length - 1) {
-        clearInterval(raceLineInterval);
-        raceLinePlaying = false;
-        document.getElementById('btn-play-line').textContent = '▶ Play';
-      }
+      if (raceLineIdx >= allMonths.length - 1) { clearInterval(raceLineInterval); raceLinePlaying = false; document.getElementById('btn-play-line').textContent = '▶ Play'; }
     }, speed);
   }
 }
+function resetRaceLine() { clearInterval(raceLineInterval); raceLinePlaying = false; raceLineIdx = 0; document.getElementById('btn-play-line').textContent = '▶ Play'; drawRaceLine(0); }
+function updateSpeedLine() { if (raceLinePlaying) { toggleRaceLine(); toggleRaceLine(); } }
 
-function resetRaceLine() {
-  clearInterval(raceLineInterval);
-  raceLinePlaying = false;
-  raceLineIdx = 0;
-  document.getElementById('btn-play-line').textContent = '▶ Play';
-  drawRaceLine(0);
-}
-
-function updateSpeedLine() {
-  if (raceLinePlaying) { toggleRaceLine(); toggleRaceLine(); }
-}
-
-// ─── RACE BAR ────────────────────────────────────────────────
 function initRaceBar() {
   if (!segData.length) return;
   document.getElementById('race-bar-loading').style.display = 'none';
   document.getElementById('race-bar-svg').style.display = 'block';
   raceBarIdx = 0;
-  drawRaceBar(raceBarIdx);
+  drawRaceBar(0);
 }
 
 function drawRaceBar(idx) {
   const month = allMonths[idx];
-  const monthData = segData.filter(r => r.fecha_snapshot === month)
-    .map(r => ({ seg: r.segmento_usuario, val: +r.total_usuarios }))
-    .sort((a,b) => b.val - a.val);
-
+  const monthData = segData.filter(r => r.fecha_snapshot === month).map(r => ({ seg: r.segmento_usuario, val: r.total_usuarios })).sort((a,b) => b.val - a.val);
   const svg = d3.select('#race-bar-svg');
   const W = document.getElementById('race-bar-svg').parentElement.offsetWidth - 40;
   const H = 460;
   const margin = { top: 10, right: 140, bottom: 30, left: 180 };
   const iW = W - margin.left - margin.right;
   const iH = H - margin.top - margin.bottom;
-
   svg.attr('viewBox', `0 0 ${W} ${H}`).selectAll('*').remove();
   const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
-
-  const x = d3.scaleLinear().domain([0, (monthData[0]?.val||1) * 1.1]).range([0, iW]);
+  const x = d3.scaleLinear().domain([0, (monthData[0]?.val||1)*1.1]).range([0, iW]);
   const y = d3.scaleBand().domain(monthData.map(d=>d.seg)).range([0, iH]).padding(0.25);
-
-  // Bars
-  g.selectAll('rect').data(monthData).enter().append('rect')
-    .attr('y', d => y(d.seg)).attr('height', y.bandwidth())
-    .attr('x', 0).attr('width', d => x(d.val))
-    .attr('fill', d => COLORS[d.seg]||'#888').attr('rx', 3).attr('opacity', 0.9);
-
-  // Labels left
-  g.selectAll('.label-left').data(monthData).enter().append('text')
-    .attr('class','label-left')
-    .attr('x', -8).attr('y', d => y(d.seg) + y.bandwidth()/2 + 4)
-    .attr('text-anchor','end').attr('fill', d => COLORS[d.seg]||'#888')
-    .attr('font-size','12px').attr('font-weight','600').text(d => d.seg);
-
-  // Labels right (values)
-  g.selectAll('.label-right').data(monthData).enter().append('text')
-    .attr('class','label-right')
-    .attr('x', d => x(d.val) + 8).attr('y', d => y(d.seg) + y.bandwidth()/2 + 4)
-    .attr('fill','#ccc').attr('font-size','12px').attr('font-weight','500')
-    .text(d => fmt(d.val));
-
-  // X axis
-  g.append('g').attr('transform',`translate(0,${iH})`)
-    .call(d3.axisBottom(x).tickFormat(d => d >= 1000 ? (d/1000).toFixed(0)+'K' : d).ticks(5))
-    .selectAll('text').style('fill','#666').style('font-size','10px');
+  g.selectAll('rect').data(monthData).enter().append('rect').attr('y', d => y(d.seg)).attr('height', y.bandwidth()).attr('x', 0).attr('width', d => x(d.val)).attr('fill', d => COLORS[d.seg]||'#888').attr('rx', 3).attr('opacity', 0.9);
+  g.selectAll('.label-left').data(monthData).enter().append('text').attr('class','label-left').attr('x', -8).attr('y', d => y(d.seg)+y.bandwidth()/2+4).attr('text-anchor','end').attr('fill', d => COLORS[d.seg]||'#888').attr('font-size','12px').attr('font-weight','600').text(d => d.seg);
+  g.selectAll('.label-right').data(monthData).enter().append('text').attr('class','label-right').attr('x', d => x(d.val)+8).attr('y', d => y(d.seg)+y.bandwidth()/2+4).attr('fill','#ccc').attr('font-size','12px').attr('font-weight','500').text(d => fmt(d.val));
+  g.append('g').attr('transform',`translate(0,${iH})`).call(d3.axisBottom(x).tickFormat(d => d>=1000?(d/1000).toFixed(0)+'K':d).ticks(5)).selectAll('text').style('fill','#666').style('font-size','10px');
   g.selectAll('.domain').style('stroke','#2a2a3a');
   g.selectAll('.tick line').style('stroke','#2a2a3a');
-
   document.getElementById('month-display-bar').textContent = month.replace('-','/');
 }
 
 function toggleRaceBar() {
   if (raceBarPlaying) {
-    clearInterval(raceBarInterval);
-    raceBarPlaying = false;
+    clearInterval(raceBarInterval); raceBarPlaying = false;
     document.getElementById('btn-play-bar').textContent = '▶ Play';
   } else {
     if (raceBarIdx >= allMonths.length - 1) raceBarIdx = 0;
@@ -638,31 +406,14 @@ function toggleRaceBar() {
     raceBarInterval = setInterval(() => {
       raceBarIdx++;
       drawRaceBar(raceBarIdx);
-      if (raceBarIdx >= allMonths.length - 1) {
-        clearInterval(raceBarInterval);
-        raceBarPlaying = false;
-        document.getElementById('btn-play-bar').textContent = '▶ Play';
-      }
+      if (raceBarIdx >= allMonths.length - 1) { clearInterval(raceBarInterval); raceBarPlaying = false; document.getElementById('btn-play-bar').textContent = '▶ Play'; }
     }, speed);
   }
 }
+function resetRaceBar() { clearInterval(raceBarInterval); raceBarPlaying = false; raceBarIdx = 0; document.getElementById('btn-play-bar').textContent = '▶ Play'; drawRaceBar(0); }
+function updateSpeedBar() { if (raceBarPlaying) { toggleRaceBar(); toggleRaceBar(); } }
 
-function resetRaceBar() {
-  clearInterval(raceBarInterval);
-  raceBarPlaying = false;
-  raceBarIdx = 0;
-  document.getElementById('btn-play-bar').textContent = '▶ Play';
-  drawRaceBar(0);
-}
-
-function updateSpeedBar() {
-  if (raceBarPlaying) { toggleRaceBar(); toggleRaceBar(); }
-}
-
-window.addEventListener('resize', () => {
-  if (transData.length) drawAlluvial();
-});
-
+window.addEventListener('resize', () => { if (transData.length) drawAlluvial(); });
 loadData();
 </script>
 </body>
