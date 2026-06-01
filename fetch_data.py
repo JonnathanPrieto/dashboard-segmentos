@@ -20,47 +20,45 @@ def get_access_token():
     })
     return r.json()['access_token']
 
-def export_view(access_token, view_id, view_name):
+def export_view(access_token, view_id, name):
     headers = {
         'Authorization': f'Zoho-oauthtoken {access_token}',
         'ZANALYTICS-ORGID': ORG_ID
     }
-    # Iniciar job asíncrono
+
+    # Iniciar exportación asíncrona
     url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views/{view_id}/data'
-    config = json.dumps({'responseFormat': 'json', 'exportType': 'async'})
-    r = requests.post(url, headers=headers, json={'config': config})
-    print(f'{view_name} init POST: {r.status_code} {r.text[:300]}')
-    
-    if r.status_code != 200:
-        # Intentar GET con parámetro async
-        r = requests.get(url, headers=headers, params={
-            'config': json.dumps({'responseFormat': 'json'}),
-            'exportType': 'async'
-        })
-        print(f'{view_name} GET async: {r.status_code} {r.text[:300]}')
+    params = {
+        'config': json.dumps({'responseFormat': 'json'}),
+        'exportType': 'async'
+    }
+    r = requests.get(url, headers=headers, params=params)
+    print(f'{name} init: {r.status_code} {r.text[:400]}')
 
     try:
         result = r.json()
     except:
+        print(f'{name} JSON parse error')
         return []
 
     job_id = result.get('data', {}).get('jobId')
-    print(f'{view_name} jobId: {job_id}')
+    print(f'{name} jobId: {job_id}')
 
     if not job_id:
+        print(f'{name} no jobId found')
         return []
 
-    # Polling del job
+    # Polling
     job_url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/exportjobs/{job_id}'
     for i in range(20):
         time.sleep(5)
         rj = requests.get(job_url, headers=headers)
         job_data = rj.json()
         status = job_data.get('data', {}).get('status', '')
-        print(f'{view_name} job status [{i}]: {status}')
+        print(f'{name} job [{i}]: {status}')
+
         if status == 'completed':
             dl_url = job_data.get('data', {}).get('downloadUrl', '')
-            print(f'{view_name} download URL: {dl_url}')
             if dl_url:
                 rd = requests.get(dl_url, headers=headers)
                 try:
@@ -70,11 +68,11 @@ def export_view(access_token, view_id, view_name):
                     if cols:
                         col_names = [c['columnName'] for c in cols]
                         return [dict(zip(col_names, row)) for row in rows]
+                    return rows
                 except:
-                    pass
-            return []
+                    return []
         elif status in ['failed', 'error']:
-            print(f'{view_name} job failed: {job_data}')
+            print(f'{name} failed: {job_data}')
             return []
 
     return []
