@@ -1,1 +1,1668 @@
-[]
+[
+  {
+    "fecha_snapshot": "31 May, 2026",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "155.030",
+    "total_apuestas": "3.248.731",
+    "total_importe": "$12.194.083.339"
+  },
+  {
+    "fecha_snapshot": "31 May, 2026",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "267.209",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 May, 2026",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "63.658",
+    "total_apuestas": "744.893",
+    "total_importe": "$2.803.446.018"
+  },
+  {
+    "fecha_snapshot": "31 May, 2026",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "72.902",
+    "total_apuestas": "358.231",
+    "total_importe": "$1.346.473.697"
+  },
+  {
+    "fecha_snapshot": "31 May, 2026",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "73.725",
+    "total_apuestas": "348.116",
+    "total_importe": "$1.317.283.933"
+  },
+  {
+    "fecha_snapshot": "31 May, 2026",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "253.864",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 May, 2026",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "26.429",
+    "total_apuestas": "1.499.983",
+    "total_importe": "$5.588.972.040"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2026",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "23.601",
+    "total_apuestas": "1.301.522",
+    "total_importe": "$4.840.394.872"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2026",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "246.939",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2026",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "259.231",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2026",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "61.820",
+    "total_apuestas": "714.644",
+    "total_importe": "$2.685.221.443"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2026",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "72.661",
+    "total_apuestas": "332.400",
+    "total_importe": "$1.245.630.828"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2026",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "146.894",
+    "total_apuestas": "2.974.582",
+    "total_importe": "$11.127.799.286"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2026",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "70.069",
+    "total_apuestas": "330.092",
+    "total_importe": "$1.248.285.604"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2026",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "61.778",
+    "total_apuestas": "708.237",
+    "total_importe": "$2.654.201.835"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2026",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "143.279",
+    "total_apuestas": "2.894.871",
+    "total_importe": "$10.783.866.882"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2026",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "69.621",
+    "total_apuestas": "328.465",
+    "total_importe": "$1.239.812.568"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2026",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "250.651",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2026",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "71.997",
+    "total_apuestas": "332.062",
+    "total_importe": "$1.239.095.660"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2026",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "228.273",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2026",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "22.810",
+    "total_apuestas": "1.253.971",
+    "total_importe": "$4.647.823.560"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2026",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "69.228",
+    "total_apuestas": "328.227",
+    "total_importe": "$1.321.114.884"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2026",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "60.137",
+    "total_apuestas": "701.597",
+    "total_importe": "$2.788.572.802"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2026",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "71.100",
+    "total_apuestas": "324.840",
+    "total_importe": "$1.290.142.599"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2026",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "245.454",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2026",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "21.640",
+    "total_apuestas": "1.147.621",
+    "total_importe": "$4.514.667.886"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2026",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "136.666",
+    "total_apuestas": "2.691.253",
+    "total_importe": "$10.632.310.376"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2026",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "215.932",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2026",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "130.904",
+    "total_apuestas": "2.589.350",
+    "total_importe": "$10.768.401.394"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2026",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "19.756",
+    "total_apuestas": "1.068.906",
+    "total_importe": "$4.427.105.797"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2026",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "238.783",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2026",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "210.155",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2026",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "67.717",
+    "total_apuestas": "321.561",
+    "total_importe": "$1.350.894.661"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2026",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "57.454",
+    "total_apuestas": "672.391",
+    "total_importe": "$2.794.893.059"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2026",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "70.027",
+    "total_apuestas": "320.295",
+    "total_importe": "$1.335.956.876"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "19.214",
+    "total_apuestas": "948.351",
+    "total_importe": "$4.513.797.020"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "207.001",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "68.651",
+    "total_apuestas": "270.688",
+    "total_importe": "$1.324.826.211"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "123.091",
+    "total_apuestas": "2.096.029",
+    "total_importe": "$10.293.664.977"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "57.958",
+    "total_apuestas": "266.194",
+    "total_importe": "$1.310.455.047"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "237.775",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "51.202",
+    "total_apuestas": "522.633",
+    "total_importe": "$2.600.021.079"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "19.589",
+    "total_apuestas": "966.263",
+    "total_importe": "$4.615.976.642"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "66.437",
+    "total_apuestas": "276.956",
+    "total_importe": "$1.352.160.431"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "49.409",
+    "total_apuestas": "504.055",
+    "total_importe": "$2.501.619.607"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "219.487",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "120.712",
+    "total_apuestas": "2.076.538",
+    "total_importe": "$10.206.415.695"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "192.857",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "55.037",
+    "total_apuestas": "251.515",
+    "total_importe": "$1.237.161.262"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "21.135",
+    "total_apuestas": "907.049",
+    "total_importe": "$4.858.161.533"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "48.568",
+    "total_apuestas": "411.143",
+    "total_importe": "$2.416.087.827"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "126.414",
+    "total_apuestas": "1.731.070",
+    "total_importe": "$9.919.048.054"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "176.527",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "49.273",
+    "total_apuestas": "223.784",
+    "total_importe": "$1.285.847.614"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "208.480",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "64.976",
+    "total_apuestas": "244.725",
+    "total_importe": "$1.377.569.516"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "200.528",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "48.254",
+    "total_apuestas": "484.314",
+    "total_importe": "$2.485.954.245"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "63.471",
+    "total_apuestas": "292.950",
+    "total_importe": "$1.473.536.843"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "158.611",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "120.623",
+    "total_apuestas": "1.962.876",
+    "total_importe": "$10.001.561.266"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "53.607",
+    "total_apuestas": "244.711",
+    "total_importe": "$1.243.431.939"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "22.352",
+    "total_apuestas": "1.062.625",
+    "total_importe": "$5.232.853.522"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "187.234",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "48.165",
+    "total_apuestas": "488.306",
+    "total_importe": "$2.527.005.159"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "147.176",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "116.548",
+    "total_apuestas": "1.925.805",
+    "total_importe": "$9.839.038.587"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "50.417",
+    "total_apuestas": "228.892",
+    "total_importe": "$1.186.580.947"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "61.745",
+    "total_apuestas": "297.039",
+    "total_importe": "$1.492.952.778"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "21.480",
+    "total_apuestas": "1.020.290",
+    "total_importe": "$5.032.800.013"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "59.982",
+    "total_apuestas": "332.350",
+    "total_importe": "$1.436.775.749"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "175.012",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "19.661",
+    "total_apuestas": "1.036.637",
+    "total_importe": "$4.496.700.143"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "104.958",
+    "total_apuestas": "2.115.794",
+    "total_importe": "$9.144.567.701"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "46.984",
+    "total_apuestas": "556.307",
+    "total_importe": "$2.419.982.043"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "52.505",
+    "total_apuestas": "247.940",
+    "total_importe": "$1.086.755.261"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "138.183",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "134.322",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "157.982",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "18.145",
+    "total_apuestas": "903.384",
+    "total_importe": "$3.791.605.341"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "48.893",
+    "total_apuestas": "232.480",
+    "total_importe": "$977.728.692"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "94.350",
+    "total_apuestas": "1.836.401",
+    "total_importe": "$7.578.996.435"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "57.569",
+    "total_apuestas": "302.764",
+    "total_importe": "$1.256.550.499"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "42.886",
+    "total_apuestas": "523.181",
+    "total_importe": "$2.178.022.496"
+  },
+  {
+    "fecha_snapshot": "31 May, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "42.229",
+    "total_apuestas": "196.992",
+    "total_importe": "$819.545.684"
+  },
+  {
+    "fecha_snapshot": "31 May, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "54.710",
+    "total_apuestas": "268.474",
+    "total_importe": "$1.116.462.670"
+  },
+  {
+    "fecha_snapshot": "31 May, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "142.520",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 May, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "38.368",
+    "total_apuestas": "436.258",
+    "total_importe": "$1.801.051.596"
+  },
+  {
+    "fecha_snapshot": "31 May, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "131.566",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 May, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "85.151",
+    "total_apuestas": "1.565.049",
+    "total_importe": "$6.485.013.024"
+  },
+  {
+    "fecha_snapshot": "31 May, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "17.327",
+    "total_apuestas": "819.702",
+    "total_importe": "$3.450.195.727"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "35.309",
+    "total_apuestas": "401.441",
+    "total_importe": "$1.670.685.934"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "15.936",
+    "total_apuestas": "748.926",
+    "total_importe": "$3.161.307.452"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "78.284",
+    "total_apuestas": "1.410.461",
+    "total_importe": "$5.867.771.447"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "38.950",
+    "total_apuestas": "181.588",
+    "total_importe": "$760.833.169"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "131.377",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "53.076",
+    "total_apuestas": "247.837",
+    "total_importe": "$1.035.180.906"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "134.434",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "111.008",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "16.864",
+    "total_apuestas": "807.642",
+    "total_importe": "$3.390.866.187"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "51.518",
+    "total_apuestas": "275.432",
+    "total_importe": "$1.145.131.785"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "81.808",
+    "total_apuestas": "1.537.507",
+    "total_importe": "$6.369.646.178"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "124.282",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "38.390",
+    "total_apuestas": "450.568",
+    "total_importe": "$1.865.326.459"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "40.164",
+    "total_apuestas": "188.707",
+    "total_importe": "$792.154.906"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "115.128",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "49.885",
+    "total_apuestas": "312.088",
+    "total_importe": "$1.248.792.021"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "19.490",
+    "total_apuestas": "941.458",
+    "total_importe": "$3.827.036.002"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "94.867",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "40.097",
+    "total_apuestas": "501.998",
+    "total_importe": "$1.992.679.561"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "79.025",
+    "total_apuestas": "1.622.118",
+    "total_importe": "$6.424.725.136"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "42.161",
+    "total_apuestas": "203.291",
+    "total_importe": "$817.243.733"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2025",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "48.525",
+    "total_apuestas": "319.468",
+    "total_importe": "$1.279.299.218"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2025",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "42.807",
+    "total_apuestas": "206.003",
+    "total_importe": "$828.527.540"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2025",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "113.427",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2025",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "39.511",
+    "total_apuestas": "494.376",
+    "total_importe": "$1.963.329.184"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2025",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "19.677",
+    "total_apuestas": "933.129",
+    "total_importe": "$3.792.232.682"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2025",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "86.052",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2025",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "78.906",
+    "total_apuestas": "1.633.381",
+    "total_importe": "$6.479.323.153"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "70.152",
+    "total_apuestas": "1.329.120",
+    "total_importe": "$5.276.450.588"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "40.500",
+    "total_apuestas": "195.274",
+    "total_importe": "$786.193.054"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "46.405",
+    "total_apuestas": "271.653",
+    "total_importe": "$1.089.373.996"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "86.728",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "108.117",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2024",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "17.048",
+    "total_apuestas": "772.870",
+    "total_importe": "$3.143.184.059"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "34.571",
+    "total_apuestas": "431.529",
+    "total_importe": "$1.715.799.934"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "104.410",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "35.042",
+    "total_apuestas": "165.852",
+    "total_importe": "$668.481.421"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2024",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "13.846",
+    "total_apuestas": "599.491",
+    "total_importe": "$2.439.513.712"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "61.050",
+    "total_apuestas": "1.025.254",
+    "total_importe": "$4.073.069.407"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "43.394",
+    "total_apuestas": "213.598",
+    "total_importe": "$857.717.006"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "28.856",
+    "total_apuestas": "338.002",
+    "total_importe": "$1.345.373.323"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "89.806",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "55.215",
+    "total_apuestas": "709.577",
+    "total_importe": "$2.821.336.404"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "97.768",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "40.639",
+    "total_apuestas": "168.685",
+    "total_importe": "$678.985.716"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2024",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "13.310",
+    "total_apuestas": "516.108",
+    "total_importe": "$2.101.763.402"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "84.380",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "26.569",
+    "total_apuestas": "303.690",
+    "total_importe": "$1.209.625.676"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "32.790",
+    "total_apuestas": "154.179",
+    "total_importe": "$622.596.078"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "38.765",
+    "total_apuestas": "175.028",
+    "total_importe": "$704.299.942"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "90.369",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "57.497",
+    "total_apuestas": "742.711",
+    "total_importe": "$2.956.035.251"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "28.687",
+    "total_apuestas": "336.225",
+    "total_importe": "$1.341.105.438"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2024",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "11.216",
+    "total_apuestas": "447.620",
+    "total_importe": "$1.812.137.603"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "34.332",
+    "total_apuestas": "161.736",
+    "total_importe": "$649.748.072"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "67.144",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "32.995",
+    "total_apuestas": "154.678",
+    "total_importe": "$618.857.878"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "27.541",
+    "total_apuestas": "318.208",
+    "total_importe": "$1.267.158.655"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "58.879",
+    "total_apuestas": "802.741",
+    "total_importe": "$3.198.323.042"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2024",
+    "segmento_usuario": "VIP User",
+    "total_usuarios": "7.090",
+    "total_apuestas": "310.753",
+    "total_importe": "$1.248.941.808"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "58.786",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "36.370",
+    "total_apuestas": "168.974",
+    "total_importe": "$678.041.108"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "83.896",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "61.477",
+    "total_apuestas": "1.243.209",
+    "total_importe": "$4.940.705.721"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "28.692",
+    "total_apuestas": "340.760",
+    "total_importe": "$1.354.691.405"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "73.308",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "30.092",
+    "total_apuestas": "142.085",
+    "total_importe": "$566.222.535"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "33.811",
+    "total_apuestas": "188.879",
+    "total_importe": "$753.938.182"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "50.068",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "31.356",
+    "total_apuestas": "166.720",
+    "total_importe": "$662.444.382"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "53.435",
+    "total_apuestas": "1.060.377",
+    "total_importe": "$4.203.505.228"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "47.777",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "26.854",
+    "total_apuestas": "126.530",
+    "total_importe": "$503.839.796"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "25.624",
+    "total_apuestas": "302.237",
+    "total_importe": "$1.200.260.800"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "67.407",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 May, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "29.296",
+    "total_apuestas": "146.361",
+    "total_importe": "$580.756.801"
+  },
+  {
+    "fecha_snapshot": "31 May, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "22.267",
+    "total_apuestas": "256.716",
+    "total_importe": "$1.018.809.000"
+  },
+  {
+    "fecha_snapshot": "31 May, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "46.463",
+    "total_apuestas": "904.201",
+    "total_importe": "$3.579.144.254"
+  },
+  {
+    "fecha_snapshot": "31 May, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "46.169",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 May, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "63.092",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 May, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "24.190",
+    "total_apuestas": "113.541",
+    "total_importe": "$452.107.988"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "21.128",
+    "total_apuestas": "99.085",
+    "total_importe": "$395.101.852"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "26.988",
+    "total_apuestas": "128.388",
+    "total_importe": "$511.006.290"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "57.993",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "19.534",
+    "total_apuestas": "225.917",
+    "total_importe": "$898.713.991"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "45.490",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "40.591",
+    "total_apuestas": "768.307",
+    "total_importe": "$3.045.322.872"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "37.177",
+    "total_apuestas": "731.846",
+    "total_importe": "$2.906.230.865"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "53.364",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "25.136",
+    "total_apuestas": "121.408",
+    "total_importe": "$484.962.995"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "17.555",
+    "total_apuestas": "204.927",
+    "total_importe": "$816.186.592"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "40.801",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "19.787",
+    "total_apuestas": "92.746",
+    "total_importe": "$370.530.205"
+  },
+  {
+    "fecha_snapshot": "29 Feb, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "50.244",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "29 Feb, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "17.786",
+    "total_apuestas": "209.989",
+    "total_importe": "$835.182.990"
+  },
+  {
+    "fecha_snapshot": "29 Feb, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "32.012",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "29 Feb, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "36.814",
+    "total_apuestas": "724.924",
+    "total_importe": "$2.877.410.049"
+  },
+  {
+    "fecha_snapshot": "29 Feb, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "23.710",
+    "total_apuestas": "122.791",
+    "total_importe": "$489.835.200"
+  },
+  {
+    "fecha_snapshot": "29 Feb, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "20.025",
+    "total_apuestas": "94.182",
+    "total_importe": "$375.661.483"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2024",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "48.401",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2024",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "22.086",
+    "total_apuestas": "114.687",
+    "total_importe": "$455.702.912"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2024",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "19.912",
+    "total_apuestas": "93.653",
+    "total_importe": "$372.850.062"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2024",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "26.647",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2024",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "16.792",
+    "total_apuestas": "201.953",
+    "total_importe": "$802.555.973"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2024",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "34.856",
+    "total_apuestas": "635.339",
+    "total_importe": "$2.515.628.242"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2023",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "20.107",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2023",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "16.043",
+    "total_apuestas": "193.952",
+    "total_importe": "$768.626.227"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2023",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "33.013",
+    "total_apuestas": "573.396",
+    "total_importe": "$2.264.432.451"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "20.209",
+    "total_apuestas": "110.190",
+    "total_importe": "$436.397.418"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2023",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "19.024",
+    "total_apuestas": "89.870",
+    "total_importe": "$357.567.896"
+  },
+  {
+    "fecha_snapshot": "31 Dec, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "45.045",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2023",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "33.150",
+    "total_apuestas": "507.091",
+    "total_importe": "$2.001.518.580"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2023",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "9.525",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "18.444",
+    "total_apuestas": "104.706",
+    "total_importe": "$414.707.992"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2023",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "17.785",
+    "total_apuestas": "83.520",
+    "total_importe": "$331.896.964"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2023",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "15.532",
+    "total_apuestas": "180.262",
+    "total_importe": "$713.787.599"
+  },
+  {
+    "fecha_snapshot": "30 Nov, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "42.568",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "38.460",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2023",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "16.079",
+    "total_apuestas": "187.634",
+    "total_importe": "$742.293.172"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2023",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "17.394",
+    "total_apuestas": "82.429",
+    "total_importe": "$327.569.896"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2023",
+    "segmento_usuario": "Defecting User",
+    "total_usuarios": "8",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2023",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "31.625",
+    "total_apuestas": "454.299",
+    "total_importe": "$1.793.337.821"
+  },
+  {
+    "fecha_snapshot": "31 Oct, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "16.606",
+    "total_apuestas": "102.628",
+    "total_importe": "$406.599.655"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "13.837",
+    "total_apuestas": "67.794",
+    "total_importe": "$268.342.880"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "36.356",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2023",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "15.593",
+    "total_apuestas": "74.352",
+    "total_importe": "$295.127.060"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2023",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "24.281",
+    "total_apuestas": "226.160",
+    "total_importe": "$892.126.335"
+  },
+  {
+    "fecha_snapshot": "30 Sep, 2023",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "13.843",
+    "total_apuestas": "166.049",
+    "total_importe": "$656.168.945"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2023",
+    "segmento_usuario": "Medium User",
+    "total_usuarios": "11.910",
+    "total_apuestas": "57.062",
+    "total_importe": "$225.960.840"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2023",
+    "segmento_usuario": "Light User",
+    "total_usuarios": "14.556",
+    "total_apuestas": "41.001",
+    "total_importe": "$161.677.350"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "11.057",
+    "total_apuestas": "32.343",
+    "total_importe": "$127.926.565"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "33.000",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Aug, 2023",
+    "segmento_usuario": "Heavy User",
+    "total_usuarios": "8.583",
+    "total_apuestas": "115.296",
+    "total_importe": "$455.154.385"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "39.673",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jul, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "6.870",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "251",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Jun, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "1.192",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 May, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "573",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 May, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "113",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "4",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "30 Apr, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "4",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "4",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Mar, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "4",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "4",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "28 Feb, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "3",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2023",
+    "segmento_usuario": "Suscripción cancelada",
+    "total_usuarios": "3",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  },
+  {
+    "fecha_snapshot": "31 Jan, 2023",
+    "segmento_usuario": "Registered Non-Buyer",
+    "total_usuarios": "4",
+    "total_apuestas": "0",
+    "total_importe": "$0"
+  }
+]
