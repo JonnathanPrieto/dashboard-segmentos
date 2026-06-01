@@ -15,54 +15,53 @@ def get_access_token():
         'client_secret': CLIENT_SECRET,
         'grant_type': 'refresh_token'
     })
+    print('Token response:', r.json())
     return r.json()['access_token']
 
 def get_table_data(access_token, table_name):
-    url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views'
     headers = {
         'Authorization': f'Zoho-oauthtoken {access_token}',
         'ZANALYTICS-ORGID': ORG_ID
     }
-    # Buscar el view ID por nombre
+    # Listar todas las vistas del workspace
+    url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views'
     r = requests.get(url, headers=headers)
-    views = r.json().get('data', {}).get('views', [])
+    print(f'Views response for {table_name}:', r.status_code, r.text[:500])
+    data = r.json()
+    views = data.get('data', {}).get('views', [])
     view_id = None
     for v in views:
         if v.get('viewName') == table_name:
             view_id = v.get('viewId')
             break
     if not view_id:
-        print(f'No se encontró la tabla: {table_name}')
+        print(f'Vista no encontrada: {table_name}')
+        print('Vistas disponibles:', [v.get('viewName') for v in views])
         return []
-
-    # Obtener datos
-    data_url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views/{view_id}/data'
-    params = {'config': json.dumps({'responseFormat': 'json'})}
-    r = requests.get(data_url, headers=headers, params=params)
-    result = r.json()
-    rows = result.get('data', {}).get('rows', [])
-    cols = result.get('data', {}).get('columns', [])
-    col_names = [c['columnName'] for c in cols]
-    return [dict(zip(col_names, row)) for row in rows]
+    # Exportar datos
+    export_url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views/{view_id}'
+    params = {'action': 'export', 'config': json.dumps({'fileType': 'json', 'responseFormat': 'json'})}
+    r = requests.get(export_url, headers=headers, params=params)
+    print(f'Export response {table_name}:', r.status_code, r.text[:500])
+    try:
+        return r.json()
+    except:
+        return []
 
 def main():
     print('Obteniendo access token...')
     token = get_access_token()
-    print('Token obtenido')
-
     os.makedirs('data', exist_ok=True)
 
     print('Obteniendo Segmentación acumulada Total...')
     seg = get_table_data(token, 'Segmentación acumulada Total')
     with open('data/segmentacion.json', 'w', encoding='utf-8') as f:
         json.dump(seg, f, ensure_ascii=False, indent=2)
-    print(f'{len(seg)} filas guardadas en data/segmentacion.json')
 
     print('Obteniendo Transiciones de segmentos Total...')
     trans = get_table_data(token, 'Transiciones de segmentos Total')
     with open('data/transiciones.json', 'w', encoding='utf-8') as f:
         json.dump(trans, f, ensure_ascii=False, indent=2)
-    print(f'{len(trans)} filas guardadas en data/transiciones.json')
 
 if __name__ == '__main__':
     main()
