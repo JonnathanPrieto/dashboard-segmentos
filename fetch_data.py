@@ -31,19 +31,33 @@ def get_view_id(token, table_name):
     }
     r = requests.get(url, headers=headers)
     views = r.json().get('data', {}).get('views', [])
+
+    # Imprimir todos los nombres para diagnóstico
+    print('Vistas disponibles en el workspace:')
+    for v in views:
+        print(f'  - "{v.get("viewName")}" (id: {v.get("viewId")})')
+
+    # Buscar por nombre exacto primero, luego por coincidencia parcial
     for v in views:
         if v.get('viewName') == table_name:
             return v.get('viewId')
+
+    # Si no encuentra exacto, buscar ignorando tildes/mayúsculas
+    table_lower = table_name.lower()
+    for v in views:
+        if v.get('viewName', '').lower() == table_lower:
+            print(f'Encontrado por coincidencia de texto: "{v.get("viewName")}"')
+            return v.get('viewId')
+
     raise Exception(f'No se encontró la vista: {table_name}')
 
 def export_async(token, view_id, table_name):
-    """Inicia exportación asíncrona y espera el resultado."""
     headers = {
         'Authorization': f'Zoho-oauthtoken {token}',
         'ZANALYTICS-ORGID': ORG_ID
     }
 
-    # 1. Iniciar el export asíncrono
+    # 1. Iniciar export asíncrono
     export_url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views/{view_id}/data'
     params = {
         'config': json.dumps({
@@ -62,11 +76,12 @@ def export_async(token, view_id, table_name):
     if not job_id:
         raise Exception(f'No se obtuvo jobId: {result}')
 
-    print(f'JobId obtenido: {job_id}. Esperando...')
+    print(f'JobId: {job_id}. Esperando...')
 
-    # 2. Polling hasta que el job termine
+    # 2. Polling
     status_url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/exportjobs/{job_id}'
-    for attempt in range(30):  # máximo ~5 minutos
+    download_url = None
+    for attempt in range(30):
         time.sleep(10)
         r = requests.get(status_url, headers=headers)
         job = r.json().get('data', {})
@@ -83,8 +98,8 @@ def export_async(token, view_id, table_name):
     else:
         raise Exception('Timeout esperando el job de exportación')
 
-    # 3. Descargar el resultado
-    print(f'Descargando datos...')
+    # 3. Descargar
+    print('Descargando datos...')
     r = requests.get(download_url, headers=headers)
     result = r.json()
 
@@ -99,7 +114,6 @@ def main():
     token = get_access_token()
     os.makedirs('data', exist_ok=True)
 
-    # Segmentación
     print('\nConsultando Segmentación acumulada Total...')
     view_id = get_view_id(token, 'Segmentación acumulada Total')
     seg = export_async(token, view_id, 'Segmentación acumulada Total')
@@ -107,7 +121,6 @@ def main():
         json.dump(seg, f, ensure_ascii=False, indent=2)
     print(f'{len(seg)} filas en segmentacion.json')
 
-    # Transiciones
     print('\nConsultando Transiciones de segmentos Total...')
     view_id = get_view_id(token, 'Transiciones de segmentos Total')
     trans = export_async(token, view_id, 'Transiciones de segmentos Total')
