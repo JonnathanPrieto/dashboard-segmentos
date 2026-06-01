@@ -1,0 +1,35 @@
+name: Update Zoho Data
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'  # Primer día de cada mes a las 6am
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch Zoho Data
+        env:
+          ZOHO_REFRESH_TOKEN: ${{ secrets.ZOHO_REFRESH_TOKEN }}
+          ZOHO_SELF_CLIENT_ID: ${{ secrets.ZOHO_SELF_CLIENT_ID }}
+          ZOHO_CLIENT_SECRET: ${{ secrets.ZOHO_CLIENT_SECRET }}
+        run: python fetch_data.py
+
+      - name: Commit and push data
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'actions@github.com'
+          git add data/
+          git diff --staged --quiet || git commit -m "Update data $(date +'%Y-%m-%d')"
+          git push
