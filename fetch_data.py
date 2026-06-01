@@ -6,7 +6,7 @@ REFRESH_TOKEN = os.environ['ZOHO_REFRESH_TOKEN']
 CLIENT_ID = os.environ['ZOHO_SELF_CLIENT_ID']
 CLIENT_SECRET = os.environ['ZOHO_CLIENT_SECRET']
 ORG_ID = '2917853000000155002'
-WORKSPACE_ID = '2917853000007172372'
+WORKSPACE_ID = '2917853000000155002'
 
 def get_access_token():
     r = requests.post('https://accounts.zoho.com/oauth/v2/token', data={
@@ -25,6 +25,7 @@ def get_view_id(access_token, view_name):
     url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views'
     r = requests.get(url, headers=headers)
     print(f'Views list status: {r.status_code}')
+    print(f'Response: {r.text[:500]}')
     data = r.json()
     views = data.get('data', {}).get('views', [])
     print(f'Total views found: {len(views)}')
