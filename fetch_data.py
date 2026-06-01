@@ -22,7 +22,7 @@ def get_view_id(access_token, view_name):
         'Authorization': f'Zoho-oauthtoken {access_token}',
         'ZANALYTICS-ORGID': ORG_ID
     }
-    url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views'
+    url = f'https://analyticsapi.zoho.com/restapi/v2/orgs/{ORG_ID}/workspaces/{WORKSPACE_ID}/views'
     r = requests.get(url, headers=headers)
     print(f'Views list status: {r.status_code}')
     print(f'Response: {r.text[:500]}')
@@ -40,7 +40,7 @@ def get_table_data(access_token, view_id):
         'Authorization': f'Zoho-oauthtoken {access_token}',
         'ZANALYTICS-ORGID': ORG_ID
     }
-    url = f'https://analyticsapi.zoho.com/restapi/v2/workspaces/{WORKSPACE_ID}/views/{view_id}/data'
+    url = f'https://analyticsapi.zoho.com/restapi/v2/orgs/{ORG_ID}/workspaces/{WORKSPACE_ID}/views/{view_id}/data'
     params = {'config': json.dumps({'responseFormat': 'json'})}
     r = requests.get(url, headers=headers, params=params)
     print(f'Data fetch status: {r.status_code}')
