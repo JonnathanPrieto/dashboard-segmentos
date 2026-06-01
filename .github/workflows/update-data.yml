@@ -2,7 +2,7 @@ name: Update Zoho Data
 
 on:
   schedule:
-    - cron: '0 6 1 * *'
+    - cron: '0 8 * * *'
   workflow_dispatch:
 
 jobs:
