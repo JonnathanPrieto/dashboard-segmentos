@@ -7012,5 +7012,425 @@
     "segmento_destino": "Light User",
     "transicion": "2026-05 → 2026-06",
     "usuarios": "714"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Light User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "2"
+  },
+  {
+    "segmento_origen": "VIP User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "315"
+  },
+  {
+    "segmento_origen": "VIP User",
+    "segmento_destino": "Heavy User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "3.163"
+  },
+  {
+    "segmento_origen": "Heavy User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "4"
+  },
+  {
+    "segmento_origen": "VIP User",
+    "segmento_destino": "Light User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "2.255"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "2"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Medium User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "3.705"
+  },
+  {
+    "segmento_origen": "Heavy User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "3.270"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "3"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Light User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "13.931"
+  },
+  {
+    "segmento_origen": "Heavy User",
+    "segmento_destino": "Heavy User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "19.275"
+  },
+  {
+    "segmento_origen": "Registered Non-Buyer",
+    "segmento_destino": "Registered Non-Buyer",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "266.920"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "7"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "5"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "21.280"
+  },
+  {
+    "segmento_origen": "VIP User",
+    "segmento_destino": "Medium User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "2.585"
+  },
+  {
+    "segmento_origen": "VIP User",
+    "segmento_destino": "VIP User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "11.485"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Heavy User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "35.470"
+  },
+  {
+    "segmento_origen": "Heavy User",
+    "segmento_destino": "Medium User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "21.360"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Medium User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "32.612"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Heavy User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "822"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Heavy User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "2"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "296.659"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Light User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "54.993"
+  },
+  {
+    "segmento_origen": "Heavy User",
+    "segmento_destino": "Light User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "14.204"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "73.111"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Medium User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "3"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-06 → 2026-07",
+    "usuarios": "36.597"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "73.111"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "71.685"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Light User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "10.148"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "14"
+  },
+  {
+    "segmento_origen": "Heavy User",
+    "segmento_destino": "Light User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "10.987"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "2"
+  },
+  {
+    "segmento_origen": "Registered Non-Buyer",
+    "segmento_destino": "Registered Non-Buyer",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "266.920"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "3"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "56.318"
+  },
+  {
+    "segmento_origen": "VIP User",
+    "segmento_destino": "Medium User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "3.374"
+  },
+  {
+    "segmento_origen": "Heavy User",
+    "segmento_destino": "Medium User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "3.644"
+  },
+  {
+    "segmento_origen": "Heavy User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "44.099"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Light User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "2.365"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "7"
+  },
+  {
+    "segmento_origen": "VIP User",
+    "segmento_destino": "Light User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "2.676"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Medium User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "1.579"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Medium User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "3.550"
+  },
+  {
+    "segmento_origen": "Heavy User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "2"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "358.121"
+  },
+  {
+    "segmento_origen": "VIP User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-07 → 2026-08",
+    "usuarios": "5.435"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-08 → 2026-09",
+    "usuarios": "535.658"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-08 → 2026-09",
+    "usuarios": "73.111"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-08 → 2026-09",
+    "usuarios": "14"
+  },
+  {
+    "segmento_origen": "Registered Non-Buyer",
+    "segmento_destino": "Registered Non-Buyer",
+    "transicion": "2026-08 → 2026-09",
+    "usuarios": "266.920"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-08 → 2026-09",
+    "usuarios": "14"
+  },
+  {
+    "segmento_origen": "Medium User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-08 → 2026-09",
+    "usuarios": "12.147"
+  },
+  {
+    "segmento_origen": "Light User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-08 → 2026-09",
+    "usuarios": "26.176"
+  },
+  {
+    "segmento_origen": "Registered Non-Buyer",
+    "segmento_destino": "Registered Non-Buyer",
+    "transicion": "2026-09 → 2026-10",
+    "usuarios": "266.920"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-09 → 2026-10",
+    "usuarios": "14"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-09 → 2026-10",
+    "usuarios": "73.111"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-09 → 2026-10",
+    "usuarios": "14"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-09 → 2026-10",
+    "usuarios": "573.981"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-10 → 2026-11",
+    "usuarios": "73.111"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-10 → 2026-11",
+    "usuarios": "14"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-10 → 2026-11",
+    "usuarios": "573.981"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-10 → 2026-11",
+    "usuarios": "14"
+  },
+  {
+    "segmento_origen": "Registered Non-Buyer",
+    "segmento_destino": "Registered Non-Buyer",
+    "transicion": "2026-10 → 2026-11",
+    "usuarios": "266.920"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-11 → 2026-12",
+    "usuarios": "14"
+  },
+  {
+    "segmento_origen": "Suscripción cancelada",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-11 → 2026-12",
+    "usuarios": "73.111"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Suscripción cancelada",
+    "transicion": "2026-11 → 2026-12",
+    "usuarios": "14"
+  },
+  {
+    "segmento_origen": "Defecting User",
+    "segmento_destino": "Defecting User",
+    "transicion": "2026-11 → 2026-12",
+    "usuarios": "573.981"
+  },
+  {
+    "segmento_origen": "Registered Non-Buyer",
+    "segmento_destino": "Registered Non-Buyer",
+    "transicion": "2026-11 → 2026-12",
+    "usuarios": "266.920"
   }
 ]
