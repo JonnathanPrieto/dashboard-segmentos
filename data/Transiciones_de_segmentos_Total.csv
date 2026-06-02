@@ -1,4 +1,4 @@
-segmento_origen,segmento_destino,transicion,usuarios
+﻿segmento_origen,segmento_destino,transicion,usuarios
 Medium User,Medium User,2026-04 → 2026-05,35.616
 Medium User,Heavy User,2026-04 → 2026-05,12.065
 Heavy User,Light User,2026-04 → 2026-05,14.928
