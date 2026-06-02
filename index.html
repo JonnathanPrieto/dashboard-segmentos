@@ -143,15 +143,9 @@ function parseDate(val) {
 
 function parseNum(val) {
   if (!val && val !== 0) return 0;
-  // Formato colombiano: punto=miles, coma=decimal. Quitar $ y puntos, reemplazar coma por punto
   let s = String(val).replace(/\$/g, '').replace(/\s/g, '').trim();
-  // Si tiene coma, es decimal colombiano
-  if (s.includes(',')) {
-    s = s.replace(/\./g, '').replace(',', '.');
-  } else {
-    // Solo puntos = separadores de miles
-    s = s.replace(/\./g, '');
-  }
+  if (s.includes(',')) { s = s.replace(/\./g, '').replace(',', '.'); }
+  else { s = s.replace(/\./g, ''); }
   return parseFloat(s) || 0;
 }
 
@@ -223,19 +217,11 @@ function drawAlluvial() {
   let data = transData;
   if (yearFilter !== 'all') data = data.filter(r => r.transicion && r.transicion.startsWith(yearFilter));
   if (hideSame) data = data.filter(r => r.segmento_origen !== r.segmento_destino);
+
   const months = [...new Set(data.flatMap(r => r.transicion ? r.transicion.split(' → ') : []))].sort();
   if (!months.length) return;
-  const svg = document.getElementById('alluvial-svg');
-  document.getElementById('alluvial-loading').style.display = 'none';
-  svg.style.display = 'block';
-  const W = svg.parentElement.offsetWidth - 40;
-  const H = 500;
-  const PAD = { top: 28, bottom: 36, left: 8, right: 8 };
-  const nodeW = 18, GAP = 5;
-  const colSpacing = (W - PAD.left - PAD.right - nodeW) / Math.max(months.length - 1, 1);
-  const colXs = months.map((_, i) => PAD.left + i * colSpacing);
-  const drawH = H - PAD.top - PAD.bottom;
-  const segH = (drawH - GAP * (SEGMENTS.length - 1)) / SEGMENTS.length;
+
+  // Calcular totales por mes y segmento
   const monthTotals = {};
   months.forEach(m => { monthTotals[m] = {}; SEGMENTS.forEach(s => monthTotals[m][s] = 0); });
   data.forEach(r => {
@@ -245,15 +231,43 @@ function drawAlluvial() {
     if (monthTotals[from]) monthTotals[from][r.segmento_origen] = (monthTotals[from][r.segmento_origen]||0) + r.usuarios;
     if (monthTotals[to]) monthTotals[to][r.segmento_destino] = (monthTotals[to][r.segmento_destino]||0) + r.usuarios;
   });
+
+  const svg = document.getElementById('alluvial-svg');
+  document.getElementById('alluvial-loading').style.display = 'none';
+  svg.style.display = 'block';
+
+  const W = svg.parentElement.offsetWidth - 40;
+  const H = 500;
+  const PAD = { top: 28, bottom: 36, left: 8, right: 8 };
+  const nodeW = 18, GAP = 5;
+  const colSpacing = (W - PAD.left - PAD.right - nodeW) / Math.max(months.length - 1, 1);
+  const colXs = months.map((_, i) => PAD.left + i * colSpacing);
+  const drawH = H - PAD.top - PAD.bottom;
+
+  // Para cada mes, calcular posición Y de cada segmento
+  // solo los segmentos con total > 0 participan en la distribución del espacio
   function buildPos(mi) {
+    const m = months[mi];
+    const activeSegs = SEGMENTS.filter(s => (monthTotals[m][s] || 0) > 0);
+    const segCount = activeSegs.length;
+    const segH = segCount > 0 ? (drawH - GAP * (segCount - 1)) / segCount : 0;
     const pos = {};
-    SEGMENTS.forEach((s, si) => {
-      pos[s] = { x: colXs[mi], y: PAD.top + si * (segH + GAP), h: segH, total: monthTotals[months[mi]][s]||0 };
+    // Mantener orden relativo de SEGMENTS pero solo para los activos
+    let idx = 0;
+    SEGMENTS.forEach(s => {
+      if ((monthTotals[m][s] || 0) > 0) {
+        pos[s] = { x: colXs[mi], y: PAD.top + idx * (segH + GAP), h: segH, total: monthTotals[m][s] };
+        idx++;
+      } else {
+        pos[s] = null; // inactivo este mes
+      }
     });
     return pos;
   }
+
   const allPos = months.map((_, i) => buildPos(i));
   let paths = '', nodes = '', labels = '';
+
   months.forEach((m, mi) => {
     if (mi === months.length - 1) return;
     const trans = `${m} → ${months[mi+1]}`;
@@ -279,18 +293,23 @@ function drawAlluvial() {
       paths += `<path d="M${x1},${ly} C${mx},${ly} ${mx},${ry} ${x2},${ry} L${x2},${ry+rh} C${mx},${ry+rh} ${mx},${ly+lh} ${x1},${ly+lh} Z" fill="${col}" fill-opacity="${orig===dest?0.13:0.42}" stroke="none" data-orig="${orig}" data-dest="${dest}" data-trans="${trans}" data-val="${val}" data-pct="${pct}" style="cursor:pointer;" class="fp"/>`;
     });
   });
+
   months.forEach((m, mi) => {
     const pos = allPos[mi];
     const shortM = m.replace('-', '/');
     SEGMENTS.forEach(s => {
       const p = pos[s];
-      nodes += `<rect x="${p.x}" y="${p.y}" width="${nodeW}" height="${p.h}" fill="${COLORS[s]}" rx="2" class="seg-node" data-seg="${s}" data-month="${m}" data-total="${p.total}" style="cursor:pointer;"/>`;
+      if (p) {
+        nodes += `<rect x="${p.x}" y="${p.y}" width="${nodeW}" height="${p.h}" fill="${COLORS[s]}" rx="2" class="seg-node" data-seg="${s}" data-month="${m}" data-total="${p.total}" style="cursor:pointer;"/>`;
+      }
     });
     labels += `<text x="${colXs[mi]+nodeW/2}" y="${H-PAD.bottom+16}" text-anchor="middle" font-size="10" fill="#666">${shortM}</text>`;
   });
+
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.setAttribute('height', H);
   svg.innerHTML = paths + nodes + labels;
+
   svg.querySelectorAll('.fp').forEach(p => {
     p.addEventListener('mouseenter', e => {
       showTooltip(`<span style="font-size:11px;color:#666">${p.dataset.trans}</span><br><strong style="color:${COLORS[p.dataset.orig]}">${p.dataset.orig}</strong> → <strong style="color:${COLORS[p.dataset.dest]}">${p.dataset.dest}</strong><br><span style="font-size:13px;font-weight:600">${fmt(+p.dataset.val)}</span> usuarios<br><span style="color:#888">${p.dataset.pct}% del segmento origen</span>`, e);
@@ -341,7 +360,8 @@ function drawRaceLine(upToIdx) {
     const segPoints = months.map(m => {
       const row = segData.find(r => r.fecha_snapshot === m && r.segmento_usuario === seg);
       return { m, v: row ? row.total_usuarios : 0 };
-    });
+    }).filter(d => d.v > 0);
+    if (!segPoints.length) return;
     const line = d3.line().x(d => x(d.m)).y(d => y(d.v)).curve(d3.curveMonotoneX);
     g.append('path').datum(segPoints).attr('fill','none').attr('stroke', COLORS[seg]).attr('stroke-width', 2.5).attr('opacity', 0.9).attr('d', line);
     const last = segPoints[segPoints.length - 1];
@@ -382,7 +402,7 @@ function initRaceBar() {
 
 function drawRaceBar(idx) {
   const month = allMonths[idx];
-  const monthData = segData.filter(r => r.fecha_snapshot === month).map(r => ({ seg: r.segmento_usuario, val: r.total_usuarios })).sort((a,b) => b.val - a.val);
+  const monthData = segData.filter(r => r.fecha_snapshot === month && r.total_usuarios > 0).map(r => ({ seg: r.segmento_usuario, val: r.total_usuarios })).sort((a,b) => b.val - a.val);
   const svg = d3.select('#race-bar-svg');
   const W = document.getElementById('race-bar-svg').parentElement.offsetWidth - 40;
   const H = 460;
