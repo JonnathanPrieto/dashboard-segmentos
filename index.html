@@ -283,14 +283,18 @@ function drawAlluvial() {
       const lp = leftPos[orig], rp = rightPos[dest];
       if (!lp || !rp) return;
       const lTotal = leftTotalForSeg[orig]||1;
-      const rTotal = monthTotals[months[mi+1]][dest]||1;
-      const lh = (val/lTotal)*lp.h, rh = (val/rTotal)*rp.h;
+      const rTotalAll = monthTotals[months[mi+1]][dest]||1;
+      // Calcular cuántos usuarios llegan al destino desde esta transición específica
+      const rTotalFromTrans = tData.filter(d => d.segmento_destino === dest).reduce((sum, d) => sum + d.usuarios, 0) || 1;
+      const lh = (val/lTotal)*lp.h;
+      const rh = (val/rTotalFromTrans)*rp.h;
       const ly = lp.y + leftOffsets[orig], ry = rp.y + rightOffsets[dest];
-      leftOffsets[orig] += lh; rightOffsets[dest] += rh;
+      leftOffsets[orig] += lh; rightOffsets[dest] += (val/rTotalAll)*rp.h;
       const x1 = lp.x + nodeW, x2 = rp.x, mx = (x1+x2)/2;
       const col = COLORS[orig]||'#888';
       const pct = ((val/lTotal)*100).toFixed(1);
-      paths += `<path d="M${x1},${ly} C${mx},${ly} ${mx},${ry} ${x2},${ry} L${x2},${ry+rh} C${mx},${ry+rh} ${mx},${ly+lh} ${x1},${ly+lh} Z" fill="${col}" fill-opacity="${orig===dest?0.13:0.42}" stroke="none" data-orig="${orig}" data-dest="${dest}" data-trans="${trans}" data-val="${val}" data-pct="${pct}" style="cursor:pointer;" class="fp"/>`;
+      const opacity = orig===dest ? 0.13 : 0.42;
+      paths += `<path d="M${x1},${ly} C${mx},${ly} ${mx},${ry} ${x2},${ry} L${x2},${ry+rh} C${mx},${ry+rh} ${mx},${ly+lh} ${x1},${ly+lh} Z" fill="${col}" fill-opacity="${opacity}" stroke="none" data-orig="${orig}" data-dest="${dest}" data-trans="${trans}" data-val="${val}" data-pct="${pct}" style="cursor:pointer;" class="fp"/>`;
     });
   });
 
